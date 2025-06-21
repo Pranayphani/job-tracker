@@ -1,0 +1,26 @@
+<table class="table table-bordered table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>First</th>
+      <th>Last</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>Skills</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let app of applications">
+      <td>{{ app.firstName }}</td>
+      <td>{{ app.lastName }}</td>
+      <td>{{ app.mail }}</td>
+      <td>{{ app.mobileNo }}</td>
+      <td>{{ app.skills?.join(", ") }}</td>
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="delete(app.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

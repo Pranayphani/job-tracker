@@ -1,0 +1,53 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <form (ngSubmit)="submitForm()">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input
+            class="form-control"
+            placeholder="First Name"
+            [(ngModel)]="form.firstName"
+            name="firstName"
+            required
+          />
+        </div>
+        <div class="col-md-6 mb-3">
+          <input
+            class="form-control"
+            placeholder="Last Name"
+            [(ngModel)]="form.lastName"
+            name="lastName"
+            required
+          />
+        </div>
+        <div class="col-md-6 mb-3">
+          <input
+            class="form-control"
+            placeholder="Email"
+            [(ngModel)]="form.mail"
+            name="mail"
+            required
+          />
+        </div>
+        <div class="col-md-6 mb-3">
+          <input
+            class="form-control"
+            placeholder="Mobile No"
+            [(ngModel)]="form.mobileNo"
+            name="mobileNo"
+            required
+          />
+        </div>
+        <div class="col-md-6 mb-3">
+          <input
+            class="form-control"
+            placeholder="Skills (comma separated)"
+            [(ngModel)]="skillsInput"
+            name="skills"
+          />
+        </div>
+      </div>
+      <button class="btn btn-success" type="submit">Add Application</button>
+    </form>
+  </div>
+</div>
